@@ -2,6 +2,7 @@
   "name": "lsp-servers",
   "license": "MIT",
   "dependencies": {
+    "dockerfile-language-server-nodejs": "^0.8.0",
     "typescript": "^4.5.5",
     "typescript-language-server": "^0.9.4"
   }

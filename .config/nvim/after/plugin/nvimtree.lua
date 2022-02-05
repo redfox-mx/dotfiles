@@ -6,9 +6,8 @@ g.nvim_tree_show_icons = {
 	files = 1,
 }
 
-g.nvim_tree_root_folder_modifier = ':t' -- only show final name
-g.nvim_tree_indent_markers = 1 -- show indent markers
-
+g.nvim_tree_root_folder_modifier = '' -- only show final name
+g.nvim_tree_special_files = {}
 g.nvim_tree_icons = {
   folder = {
     default = '', -- folder closed
@@ -22,13 +21,13 @@ g.nvim_tree_icons = {
 
 local nvim_tree = require 'nvim-tree'
 local tree_cb   = require'nvim-tree.config'.nvim_tree_callback
-local custom_cb = require'redfox.nvimtree.util'.custom_callback
 
 nvim_tree.setup({
   update_cwd = false,
   view = {
-    side = 'right',
     auto_resize = true,
+    side = 'right',
+    hide_root_folder = true,
     mappings = {
       custom_only = true,
       list= {
@@ -36,11 +35,7 @@ nvim_tree.setup({
         { key = 'i',              cb = tree_cb('preview')           },
         { key = 'h',              cb = tree_cb('close_node')        },
         { key = '<c-s>s',         cb = tree_cb('split')             },
-        { key = '<c-s>j',         cb = custom_cb('split', 'down')   },
-        { key = '<c-s>k',         cb = custom_cb('split', 'up')     },
         { key = '<c-v>v',         cb = tree_cb('vsplit')            },
-        { key = '<c-v>h',         cb = custom_cb('vsplit', 'left')  },
-        { key = '<c-v>l',         cb = custom_cb('vsplit', 'right') },
         { key = 'c',              cb = tree_cb('create')            },
         { key = 'D',              cb = tree_cb('remove')            },
         { key = 'r',              cb = tree_cb('rename')            },
