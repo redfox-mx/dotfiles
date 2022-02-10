@@ -14,9 +14,10 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim'
 Plug 'rafcamlet/nvim-luapad'
-
--- theme
-Plug 'marko-cerovac/material.nvim'
+Plug 'onsails/lspkind-nvim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'famiu/bufdelete.nvim'
+Plug 'vim-scripts/BufOnly.vim'
 
 -- editor
 Plug 'editorconfig/editorconfig-vim'

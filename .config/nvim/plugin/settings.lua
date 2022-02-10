@@ -3,6 +3,9 @@ local cmd = vim.cmd
 local env = vim.env
 local g = vim.g
 
+opt.laststatus = 0 -- Disable status-line.
+opt.statusline = ' ' -- Disable built-in status-line string for splits.
+opt.showmode = false
 opt.fillchars = { -- Characters to be used in various user-interface elements.
   stl = ' ', -- Status-line of the current window.
   stlnc = ' ', -- Status-line of the non-current windows.
